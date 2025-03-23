@@ -21,33 +21,67 @@
             <img src="fotogg.png" alt="Foto de Gustavo Ramalho" class="profile-img">
             <h2>Sobre Mim</h2>
             <p>
-                Há um tempo venho atuando na área de Social Media, criando conteúdos visuais impactantes para empresas e empreendedores. Meu trabalho é transformar ideias em artes visuais envolventes que comunicam com clareza e personalidade.
+                Há um tempo venho atuando na área de Social Media, criando conteúdos visuais impactantes para empresas e empreendedores. Meu trabalho é transformar ideias em artes visuais envolventes que comunicam com clareza e personalidade. Com experiência e um olhar detalhista, busco sempre inovar e oferecer soluções criativas que fazem a diferença. Desde a identidade visual até a fotografia profissional, estou sempre focado em agregar valor ao trabalho dos meus clientes.
 
-Com experiência e um olhar detalhista, busco sempre inovar e oferecer soluções criativas que fazem a diferença. Desde a identidade visual até a fotografia profissional, estou sempre focado em agregar valor ao trabalho dos meus clientes.
             </p>
         </section>
     </main>
-    <!-- Seção de Portfólio com Swiper -->
-<section class="portfolio">
-    <h2>Meus Carrosséis no Instagram</h2>
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="carrossel1.jpg" alt="Carrossel 1"></div>
-            <div class="swiper-slide"><img src="carrossel2.jpg" alt="Carrossel 2"></div>
-            <div class="swiper-slide"><img src="carrossel3.jpg" alt="Carrossel 3"></div>
-            <div class="swiper-slide"><img src="carrossel4.jpg" alt="Carrossel 4"></div>
-        </div>
-        <!-- Botões de navegação -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <!-- Paginação -->
-        <div class="swiper-pagination"></div>
-    </div>
-</section>
 
-<!-- Importação do Swiper.js -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Seção de Portfólio com Slider -->
+    <section class="portfolio">
+        <h2>Veja alguns serviços</h2>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide" onclick="openModal(1)">
+                    <img src="foto1msc.png" alt="Arte 1">
+                </div>
+                <div class="slide" onclick="openModal(2)">
+                    <img src="foto1msc.png" alt="Arte 2">
+                </div>
+                <div class="slide" onclick="openModal(3)">
+                    <img src="imagens/arte3.jpg" alt="Arte 3">
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    
+        <!-- Modal com Slider Secundário -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="slider-container">
+                    <div class="slider" id="modalSlider">
+                        <!-- Subimagens de cada arte -->
+                        <div class="modal-slide" data-arte="1">
+                            <img src="foto1msc.png" alt="Arte 1 - 1">
+                            <img src="foto1msc.png" alt="Arte 1 - 2">
+                            <img src="imagens/arte1_3.jpg" alt="Arte 1 - 3">
+                        </div>
+                        <div class="modal-slide" data-arte="2">
+                            <img src="foto1msc.png" alt="Arte 2 - 1">
+                            <img src="imagens/arte2_2.jpg" alt="Arte 2 - 2">
+                            <img src="imagens/arte2_3.jpg" alt="Arte 2 - 3">
+                        </div>
+                        <div class="modal-slide" data-arte="3">
+                            <img src="imagens/arte3_1.jpg" alt="Arte 3 - 1">
+                            <img src="imagens/arte3_2.jpg" alt="Arte 3 - 2">
+                            <img src="imagens/arte3_3.jpg" alt="Arte 3 - 3">
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button onclick="prevModalSlide()">&#10094;</button>
+                        <button onclick="nextModalSlide()">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    <script src="script.js"></script>
+   
 
 </body>
 </html>
